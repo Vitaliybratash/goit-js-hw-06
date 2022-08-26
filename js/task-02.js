@@ -6,9 +6,11 @@ const ingredients = [
   "Herbs",
   "Condiments",
 ];
+let total = "";
 ingredients.forEach((el) => {
   const li = document.createElement("li");
   li.innerText = el;
   li.classList.add("item");
-  document.querySelector("#ingredients").append(li);
-});
+  total += li.outerHTML
+})
+document.querySelector("#ingredients").insertAdjacentHTML("beforeend", total);
