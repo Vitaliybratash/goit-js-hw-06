@@ -7,7 +7,7 @@ const ingredients = [
   "Condiments",
 ];
 let total = "";
-ingredients.forEach((el) => {
+ingredients.map((el) => {
   const li = document.createElement("li");
   li.innerText = el;
   li.classList.add("item");

@@ -16,7 +16,7 @@ let total = ""
 const gallery = document.querySelector(".gallery");
 gallery.style.display = "flex";
 gallery.style.cssText = "flex-direction: row";
-images.forEach((img) => {
+images.map((img) => {
   const li = document.createElement("li");
   li.insertAdjacentHTML("beforeend", `<img src = ${img.url} alt = ${img.alt}>`);
  total += li.outerHTML
