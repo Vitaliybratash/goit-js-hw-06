@@ -8,17 +8,17 @@ const images = [
     alt: "Orange and White Koi Fish Near Yellow Koi Fish",
   },
   {
-    url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", 
+    url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     alt: "Group of Horses Running",
   },
 ];
-let total = ""
 const gallery = document.querySelector(".gallery");
 gallery.style.display = "flex";
 gallery.style.cssText = "flex-direction: row";
-images.map((img) => {
+
+const total = images.map((img) => {
   const li = document.createElement("li");
   li.insertAdjacentHTML("beforeend", `<img src = ${img.url} alt = ${img.alt}>`);
- total += li.outerHTML
+  return li;
 });
-gallery.insertAdjacentHTML("beforeend", total);
+gallery.append(...total);

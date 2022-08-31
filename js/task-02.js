@@ -6,11 +6,11 @@ const ingredients = [
   "Herbs",
   "Condiments",
 ];
-let total = "";
-ingredients.map((el) => {
+const total = document.querySelector("#ingredients");
+
+const itms = ingredients.map(ingredient => {
   const li = document.createElement("li");
-  li.innerText = el;
-  li.classList.add("item");
-  total += li.outerHTML
-})
-document.querySelector("#ingredients").insertAdjacentHTML("beforeend", total);
+  li.textContent = ingredient;
+  return li;
+});
+total.append(...itms);
