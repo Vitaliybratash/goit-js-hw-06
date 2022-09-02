@@ -18,7 +18,7 @@ gallery.style.cssText = "flex-direction: row";
 
 const total = images.map((img) => {
   const li = document.createElement("li");
-  li.insertAdjacentHTML("beforeend", `<img src = ${img.url} alt = ${img.alt}>`);
+  li.innerHTML = `<img src = ${img.url} alt = ${img.alt}>`
   return li;
 });
 gallery.append(...total);
